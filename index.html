@@ -109,12 +109,12 @@
         </span>
 
         <span class="flex clex-row items-center justify-center">
-            <img class=" position rounded-2xl border-2 drop-shadow-[0_10px_10px_orange]"
+            <img class=" rounded-[50%] border-2 drop-shadow-[0_10px_10px_orange]"
                 src="https://i.pinimg.com/736x/37/84/19/3784192acd5ca66c8741958c219b062e.jpg" height="50%" width="50%"
                 alt="my photo" />
 
         </span>
-        <button class=" hover:text-blue-500 ">
+        <button class=" hover:text-orange-500 ">
             <a class="flex flex-row gap-1 items-center justify-center mt-10 text-3xl"
                 href="./public/web Валентюкевич О.Е 3312.docx" download="web Валентюкевич О.Е 3312.docx">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -415,7 +415,7 @@
 
         <h1 class="m-3 p-5 text-center bg-[#1E4C86] rounded-lg text-white">Задания по верстке</h1>
         <h1 class="text-center font-bold">A</h1>
-        <table class="min-h-screen">
+        <table class="min-h-screen" id="table">
             <tbody>
                 <!-- первая строка -->
                 <tr>
@@ -562,8 +562,138 @@
                 Send
             </button>
         </form>
+
+
+        <form class="p-6 space-y-6 border-2 border-blue-500 rounded-lg mt-5">
+            <!-- Поле ФИО -->
+            <div class="p-6 space-y-4">
+                <!-- Поле логина -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Login</label>
+                    <input type="text"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                        placeholder="enter login">
+                </div>
+
+                <!-- Поле пароля -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Password</label>
+                    <input type="password"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                        placeholder="enter password">
+                </div>
+
+                <!-- Поле URL -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">URL</label>
+                    <input type="url"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                        placeholder="https://example.com">
+                </div>
+
+                <!-- Поле названия сайта -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Name web app</label>
+                    <input type="text"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                        placeholder="Name wep app">
+                </div>
+
+                <!-- Поле описания сайта -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">Description</label>
+                    <textarea
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                        rows="3" placeholder="Description web app"></textarea>
+                </div>
+
+                <!-- Кнопки -->
+                <div class="flex space-x-3 pt-2">
+                    <button
+                        class="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-4 rounded-lg transition">
+                        Send
+                    </button>
+                    <button
+                        class="flex-1 bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-4 rounded-lg transition">
+                        Clear form
+                    </button>
+                </div>
+            </div>
+            </div>
+        </form>
     </section>
 
+    <section class="flex flex-col min-h-screen w-[100%] bg-gray-200 p-2">
+        <main class="flex flex-col min-h-screen w-[100%] border-2 rounded-lg border-pink-300 p-2">
+
+            <h1 class="text-center text-2xl pb-5 pt-5"> Т а б л и ц ы в HTML</h1>
+            <p class="bg-gray-800 text-white m-3">Одним из наиболее мощных и
+                широко применяемых в <b>HTML</b> средств являются
+                <i><em>таблицы</em></i>.
+            </p>
+            <p class="text-end w-1/2 items-end "><span class="bg-pink-300"> <span class="underline">Понятие
+                        табличного
+                        представления данных не
+                        нуждается в
+                        дополнительном
+                        пояснении</span>.</span>
+                <span class="bg-gray-500 text-white">В HTML таблицы используются не только традиционно,
+                    как метод представления данных, но и как средство форматирования Web-страниц.</span>
+            </p>
+            <p class="mb-5 text-pink-500">Создание простейших HTML-таблиц</p>
+            <p class="mb-5"><span class="bg-pink-200 font-bold">Описание</span> <i><span
+                        class="underline">таблиц</span></i>
+                <span class="underline">должно</span>
+                располагаться внутри раздела
+                документа
+                &lt;BODY&gt;
+            </p>
+            <p class="mb-5">Каждая <span class="underline"><a href="#table" class="text-blue-400">таблица</a></span>
+                должна
+                НАЧИНАТЬСЯ
+                тэгом &lt;TABLE&gt; и
+                завершаться тэгом &lt;TABLE&gt;.</p>
+
+            <p class="bg-gray-300">
+                <span class="text-blue-500" style="font-family: Monotype Corsiva;">Каждая</span> строка начинается тэгом
+                &lt;TR&gt;(Table Row)
+                и завершаться тэгом &lt;/TR&gt;.
+                <span class="text-red-500" style="font-family: Monotype Corsiva;">Отдельная</span> ячейка в строке
+                обрамляется парой тегов &lt;TD&gt; и
+                &lt;/TD&gt;
+                (Table Data) или &lt;TH&gt; и &lt;/TH&gt; (Table Header)
+            </p>
+            <p class="text-end">Таблица1</p>
+            <p class="line-through text-center">Математические выражения</p>
+            <table style="border: 3px solid black; border-collapse: collapse;">
+                <tbody>
+                    <tr style="background-color: rgb(8, 232, 240);">
+                        <td style="border: 1px solid black; font-family: Monotype Corsiva;" colspan="8"
+                            class="font-(family-name:Monotype Corsiva)">
+                            Поле1</td>
+                        <td class="bg-black text-white" style="border: 1px solid black;" colspan="8">Поле 2</td>
+                        <td class="bg-blue-300 text-end" style="border: 1px solid black;" colspan="8">Поле 3</td>
+                        <td class="text-start bg-pink-400 underline" style="border: 1px solid black;" colspan="8">Поле 4
+                        </td>
+                        <td class="bg-yellow-400" style="border: 1px solid black;" colspan="8">П о л е 5</td>
+                    </tr>
+                    <tr class="border-2">
+                        <td class="text-start text-blue-400" style="border: 1px solid black;" colspan="8">
+                            (a+b)<sup>2</sup></td>
+                        <td style="border: 1px solid black;" colspan="8">a<sup>2</sup> - b<sup>2</sup></td>
+                        <td class="text-end text-pink-500" style="border: 1px solid black;" colspan="8">
+                            (a-b)<sup>3</sup></td>
+                        <td class="text-center" style="border: 1px solid black;" colspan="8">
+                            A<sub>1</sub>+A<sub>2</sub>+...+A<sub>i</sub>
+                        </td>
+                        <td class="text-blue-500 text-center" style="border: 1px solid black;" colspan="8">y =
+                            x<sup>2</sup></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </main>
+    </section>
     <footer
         class="h-auto bg-gray-200 bg-opacity-20 backdrop-blur-md border border-white border-opacity-20 rounded-lg shadow-l md:p-3 flex flex-row gap-3 justify-between  w-[100%] bg-gray-200 backdrop-blur-sm p-5">
         <address id="conection">
@@ -572,6 +702,7 @@
         Study project for NVSU
         <!-- <img src="https://i.pinimg.com/originals/c8/4f/b7/c84fb740471d58ba9597ace28969d490.gif" alt="citty" /> -->
     </footer>
+
 </body>
 
 </html>
