@@ -47,6 +47,8 @@
             </button>
             <button class="hover:text-pink-500 ">
                 <a href="#conection">Contact</a></button>
+            <button class="hover:text-pink-500 ">
+                <a href="#labs_4">Labs 4</a></button>
 
         </menu>
 
@@ -833,6 +835,182 @@
 
         </main>
     </section>
+    <section id="labs_4" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Задание 1.1 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">1.1 Проверка отрицательного числа</h2>
+            <p class="text-sm text-gray-600 mb-3">Дано число. Проверьте, отрицательное оно или нет.</p>
+            <input type="number" id="input1_1" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Введите число">
+            <button onclick="Ex1_1(document.getElementById('input1_1').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Проверить
+            </button>
+        </div>
+
+        <!-- Задание 1.2 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">1.2 Длина строки</h2>
+            <p class="text-sm text-gray-600 mb-3">Дана строка. Выведите длину этой строки.</p>
+            <input type="text" id="input1_2" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Введите строку">
+            <button onclick="Ex1_2(document.getElementById('input1_2').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Проверить длину
+            </button>
+        </div>
+
+        <!-- Задание 2.1 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">2.1 Первая цифра числа</h2>
+            <p class="text-sm text-gray-600 mb-3">Дано число. Выведите первую цифру этого числа.</p>
+            <input type="number" id="input2_1" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Введите число">
+            <button onclick="Ex2_1(document.getElementById('input2_1').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Получить первую цифру
+            </button>
+        </div>
+
+        <!-- Задание 2.2 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">2.2 Последняя цифра числа</h2>
+            <p class="text-sm text-gray-600 mb-3">Дано число. Выведите последнюю цифру этого числа.</p>
+            <input type="number" id="input2_2" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Введите число">
+            <button onclick="Ex2_2(document.getElementById('input2_2').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Получить последнюю цифру
+            </button>
+        </div>
+
+        <!-- Задание 3.1 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">3.1 Предпоследний символ</h2>
+            <p class="text-sm text-gray-600 mb-3">Дана строка. Если более одного символа, выведите предпоследний символ.
+            </p>
+            <input type="text" id="input3_1" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Введите строку">
+            <button onclick="Ex3_1(document.getElementById('input3_1').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Получить символ
+            </button>
+        </div>
+
+        <!-- Задание 3.2 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">3.2 Деление без остатка</h2>
+            <p class="text-sm text-gray-600 mb-3">Проверьте, что первое число делится на второе без остатка.</p>
+            <input type="number" id="input3_2_1" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Первое число">
+            <input type="number" id="input3_2_2" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Второе число">
+            <button
+                onclick="Ex3_2(document.getElementById('input3_2_1').value, document.getElementById('input3_2_2').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Проверить деление
+            </button>
+        </div>
+
+        <!-- Задание 4.1 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">4.1 Числа от 1 до 100</h2>
+            <p class="text-sm text-gray-600 mb-3">Выведите все целые числа от 1 до 100.</p>
+            <button onclick="Ex4_1()" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">
+                Показать числа
+            </button>
+        </div>
+
+        <!-- Задание 4.5 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">4.5 Числа кратные трем</h2>
+            <p class="text-sm text-gray-600 mb-3">Выведите все числа кратные трем от 1 до 100.</p>
+            <button onclick="Ex4_5()" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">
+                Показать числа
+            </button>
+        </div>
+
+        <!-- Задание 5.1 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">5.1 Сумма чисел 1-100</h2>
+            <p class="text-sm text-gray-600 mb-3">Найдите сумму всех целых чисел от 1 до 100.</p>
+            <button onclick="Ex5_1()" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">
+                Вычислить сумму
+            </button>
+        </div>
+
+        <!-- Задание 5.4 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">5.4 Остаток от деления</h2>
+            <p class="text-sm text-gray-600 mb-3">Найдите остаток от деления первого числа на второе.</p>
+            <input type="number" id="input5_4_1" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Первое число">
+            <input type="number" id="input5_4_2" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Второе число">
+            <button
+                onclick="Ex5_4(document.getElementById('input5_4_1').value, document.getElementById('input5_4_2').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Найти остаток
+            </button>
+        </div>
+
+        <!-- Задание 6.1 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">6.1 Сумма квадратов</h2>
+            <p class="text-sm text-gray-600 mb-3">Найдите сумму квадратов элементов массива.</p>
+            <input type="text" id="input6_1" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Числа через запятую: 1,2,3,4">
+            <button onclick="Ex6_1(document.getElementById('input6_1').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Вычислить
+            </button>
+        </div>
+
+        <!-- Задание 6.4 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">6.4 Сумма от 0 до 10</h2>
+            <p class="text-sm text-gray-600 mb-3">Сумма элементов больше нуля и меньше десяти.</p>
+            <input type="text" id="input6_4" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Числа через запятую: 1,2,3,4">
+            <button onclick="Ex6_4(document.getElementById('input6_4').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Вычислить
+            </button>
+        </div>
+
+        <!-- Задание 7.1 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">7.1 Строка в массив</h2>
+            <p class="text-sm text-gray-600 mb-3">Получите массив букв строки.</p>
+            <input type="text" id="input7_1" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Введите строку">
+            <button onclick="Ex7_1(document.getElementById('input7_1').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Преобразовать
+            </button>
+        </div>
+
+        <!-- Задание 7.3 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">7.3 Перевернуть число</h2>
+            <p class="text-sm text-gray-600 mb-3">Переверните число: 12345 → 54321</p>
+            <input type="number" id="input7_3" class="w-full p-2 border border-gray-300 rounded mb-2"
+                placeholder="Введите число">
+            <button onclick="Ex7_3(document.getElementById('input7_3').value)"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+                Перевернуть
+            </button>
+        </div>
+
+        <!-- Задание 8.1 -->
+        <div class="bg-white p-4 rounded-lg shadow-md">
+            <h2 class="text-lg font-semibold mb-2">8.1 Массив 1-10</h2>
+            <p class="text-sm text-gray-600 mb-3">Заполните массив целыми числами от 1 до 10.</p>
+            <button onclick="Ex8_1()" class="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600">
+                Создать массив
+            </button>
+        </div>
+    </section>
     <footer
         class="h-auto bg-gray-200 bg-opacity-20 backdrop-blur-md border border-white border-opacity-20 rounded-lg shadow-l md:p-3 flex flex-row gap-3 justify-between  w-[100%] bg-gray-200 backdrop-blur-sm p-5">
         <address id="conection">
@@ -841,7 +1019,8 @@
         Study project for NVSU
         <!-- <img src="https://i.pinimg.com/originals/c8/4f/b7/c84fb740471d58ba9597ace28969d490.gif" alt="citty" /> -->
     </footer>
-
+    <script src="/script.js">
+    </script>
 </body>
 
 </html>
