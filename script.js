@@ -521,3 +521,209 @@ const calculateDeterminant3x3 = (a11, a12, a13, a21, a22, a23, a31, a32, a33) =>
         - a12 * (a21 * a33 - a23 * a31)
         + a13 * (a21 * a32 - a22 * a31);
 }
+
+const Exs6_1 = (event) => {
+    $(event.target).closest('.bg-black').find('p').hide(500);
+}
+
+const Exs6_2 = (event) => {
+    $(event.target).closest('.bg-black').find('#p1').hide(500);
+}
+
+const Exs6_3_1 = (event) => {
+    $(event.target).closest('.bg-black').find('#p2').hide(500);
+}
+const Exs6_3_2 = (event) => {
+    $(event.target).closest('.bg-black').find('#p3').hide(500);
+}
+
+const Exs6_4 = (event) => {
+    $(event.target).closest('.bg-black').find('.hides').hide(500);
+}
+//Вариант 1: в исходный файл Experiments.html добавить в начало две кнопки: одну-для
+// скрытия элементов, другую – для отображения скрытых элементов. Настроить методы
+// click( ) кнопок, так чтобы они то скрывали, то отображали нечетные элементы с классом MsoNormal.
+const Exs6_var1 = (event) => {
+    const $container = $(event.target).closest('.bg-black');
+    const $oddElements = $container.find('ul li:nth-child(odd)');
+
+    if ($oddElements.is(':visible')) {
+        $oddElements.hide(500);
+        $(event.target).text('Показать нечетные');
+    } else {
+        $oddElements.show(500);
+        $(event.target).text('Скрыть нечетные');
+    }
+}
+const Exs6_5 = (event) => {
+    $(event.target).closest('.bg-black').hide(this);
+}
+const Exs6_6 = () => {
+    $('button').on('dblclick', () => { $('#dblclick').hide(500) })
+}
+const Exs6_7 = () => {
+    $('#chengBtn').on('mouseenter', function () {
+        $(this)
+            .css({
+                'background-color': '#2796dbff',
+                'transform': 'scale(1.1)',
+                'box-shadow': '0 10px 25px rgba(219, 39, 119, 0.3)',
+                'transition': 'all 0.3s ease-in-out'
+            })
+            .text('🚀 Изменено при наведении!');
+    }).on('mouseleave', function () {
+        $(this)
+            .css({
+                'background-color': '#ec4899',
+                'transform': 'scale(1)',
+                'box-shadow': 'none'
+            })
+            .text('Измениюсь при наведении');
+    });
+}
+
+const Exs6_8 = () => {
+    $('#focus').on('focus', function () {
+        $(this)
+            .css({
+                'background-color': 'linear-gradient(135deg, #db2778 0%, #fecaca 100%)',
+                'transform': 'scale(1.1)',
+                'box-shadow': '0 10px 25px rgba(219, 39, 119, 0.3)',
+                'transition': 'all 0.3s ease-in-out'
+            })
+            .attr('placeholder', '');
+    })
+        .on('blur', function () {
+            $(this)
+                .removeClass('input-focused')
+                .css({
+                    'background-color': '#111827',
+                    'border-color': '#ec4899',
+                    'transform': 'scale(1)',
+                    'box-shadow': '0 0 0 0px rgba(139, 92, 246, 0)',
+                    'color': '#f3f4f6'
+                })
+                .attr('placeholder', 'Кликните для фокуса...');
+        });
+}
+const Exs6_9 = (event) => {
+    $(event.target).closest('.bg-black').find('#speedChenge').hide(1000);
+}
+const Exs6_10 = (event) => {
+    $(event.target).closest('.bg-black').find('#speedChenge').toggle(500);
+}
+const Exs6_var2 = () => {
+    $('.imgInTable').each(function () {
+        const $td = $(this);
+        const $img = $td.find('img');
+
+        $td.on('mouseenter', function () {
+            $img.stop(true).fadeOut(400);
+        }).on('mouseleave', function () {
+            $img.stop(true).fadeIn(400);
+        });
+    });
+}
+const Exs6_var3 = (event) => {
+    const $button = $(event.target);
+    let isFirstPhase = true;
+    $button.prop('disabled', true);
+    const $paragraphs = $('.border-pink-500 p');
+    $paragraphs.each(function (index) {
+        const $p = $(this);
+
+
+        if (isFirstPhase) {
+            if ((index + 1) % 2 === 0) {
+                // Четный параграф 
+                $p.fadeIn(2000);
+            } else {
+                // Нечетный параграф 
+                $p.fadeOut(2000);
+            }
+        }
+    });
+
+    setTimeout(() => {
+        $paragraphs.each(function (index) {
+            const $p = $(this);
+
+            if ((index + 1) % 2 === 0) {
+                // Четный параграф 
+                $p.fadeOut(2000);
+            } else {
+                // Нечетный параграф 
+                $p.fadeIn(2000);
+            }
+        });
+        setTimeout(() => {
+            $button.prop('disabled', false);
+            $button.text(isFirstPhase ? "Показать снова" : "Показать");
+        }, 2000);
+
+    }, 2000);
+}
+const Exs6_11 = () => {
+    $('#div1').fadeIn();        // Быстро
+    $('#div2').fadeIn("slow");  // Средне
+    $('#div3').fadeIn(3000);    // Медленно
+}
+
+const Exs6_12 = () => {
+    $('#div1_1').fadeOut();        // Быстро
+    $('#div2_2').fadeOut("slow");  // Средне
+    $('#div3_3').fadeOut(3000);    // Медленно
+}
+const Exs6_13 = () => {
+    $("#schengeDiv").slideDown("slow");
+}
+const Exs6_14 = () => {
+    $("div#schengeDiv").animate({ left: '250px' });
+}
+const Exs6_15 = () => {
+    var links = $('#linksShow li > a');
+    for (var i = 0; i < links.length; i++) {
+        alert(links[i].href);
+    }
+}
+const Exs6_16 = () => {
+    var links = $('a', 'li');
+    for (var i = 0; i < links.length; i++) {
+        alert(i + " Example 16: " + links[i].href);
+    }
+}
+const Exs6_17 = () => {
+    var links = $('li a');
+    links.each(function (i, a) {
+        alert(i + ': ' + a.innerHTML);
+        if (i == 1) return false; // стоп на элементе коллекции с индексом 1
+    });
+}
+const Exs6_18 = () => {
+    $("#btn1").click(function () {
+        alert("Text: " + $("#test").text());
+    });
+
+    $("#btn2").click(function () {
+        alert("HTML: " + $("#test").html());
+    });
+}
+const Exs6_19 = () => {
+    $("button").click(function () {
+        alert("Value: " + $("#test").val());
+    });
+}
+const Exs6_20 = () => {
+    $("button").click(function () {
+        alert($("#w3s").attr("href"));
+    });
+}
+$(document).ready(function () {
+    Exs6_7();
+    Exs6_8();
+    Exs6_var2();
+    Exs6_18();
+    Exs6_19();
+    Exs6_20();
+    // Exs6_16();
+});

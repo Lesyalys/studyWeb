@@ -6,6 +6,7 @@
     <link rel="icon" href="./arcticons--studysmarter.png" type="image/png">
     <title>Study page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/style.css"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -332,6 +333,7 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
             <span id="result8_1" class="result-hidden mt-2 p-2 bg-gray-800 rounded text-sm text-white"></span>
         </div>
     </section>
+
     <h2 class="text-3xl font-bold text-white my-8 text-center">Ex 3-5</h2>
     <section class=" min-h-screen w-full overflow-hidden grid grid-cols-3">
         <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
@@ -373,11 +375,355 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
                 уравнений с тремя переменными методом Крамера</p>
             <button onclick="Ex5('result5')"
                 class="w-full bg-purple-500 text-white p-2 rounded hover:bg-purple-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
-                Создать массив
+                Решение системы
             </button>
             <span id="result5" class="result-hidden mt-2 p-2 bg-gray-800 rounded text-sm text-white"></span>
         </div>
     </section>
+
+    <h2 class="text-3xl font-bold text-white my-8 text-center">Ex 6 (JQwery)</h2>
+    <section class=" min-h-screen w-full overflow-hidden grid grid-cols-3">
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 1</h2>
+            <span class="text-sm text-gray-300 mb-3">Выполнить пример, проверить работу метода hile ( ). </span>
+            <button onclick="Exs6_1(event)"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Скрыть
+            </button>
+            <div class="border-2 border-pink-500 rounded-lg p-3 mt-1">
+                <h2>This is a heading</h2>
+                <p class="text-pink-300">This is a paragraph.</p>
+                <p class="text-pink-300">This is another paragraph.</p>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 2</h2>
+            <span class="text-sm text-gray-300 mb-3">Выполнить пример, проверить работу метода hile ( ) по id. </span>
+            <button onclick="Exs6_2(event)"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Скрыть
+            </button>
+            <div class="border-2 border-pink-500 rounded-lg p-3 mt-1">
+                <h2>This is a heading</h2>
+                <p id="p1" class="text-pink-300">This is a paragraph hide (id="p1").</p>
+                <p>This is another paragraph.</p>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 3</h2>
+            <span class="text-sm text-gray-300 mb-3">Выполнить пример, проверить работу метода hile ( ) по 2 разным id.
+            </span>
+            <span class="flex flex-col gap-2">
+                <button onclick="Exs6_3_1(event)"
+                    class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                    Скрыть
+                </button>
+                <button onclick="Exs6_3_2(event)"
+                    class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                    Скрыть
+                </button>
+            </span>
+            <div class="border-2 border-pink-500 rounded-lg p-3 mt-1">
+                <h2>This is a heading</h2>
+                <p id="p2" class="text-pink-300">This is a paragraph hide (id="p2").</p>
+                <p id="p3" class="text-blue-300">This is another paragraph hide (id="p3").</p>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 4</h2>
+            <span class="text-sm text-gray-300 mb-3">Выполнить пример, проверить работу метода hile ( ) по class.
+            </span>
+            <button onclick="Exs6_4(event)"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Скрыть
+            </button>
+            <div class="border-2 border-pink-500 rounded-lg p-3 mt-1">
+                <h2>This is a heading</h2>
+                <p class="hides text-pink-300">This is a paragraph hide (class="hides").</p>
+                <p class="hides text-pink-300">This is another paragraph (class="hides").</p>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-whit">Индивидуальное задание 1: Вариант 1
+            </h2>
+            <span class="text-sm text-gray-300 mb-3">Настроить методы
+                click( ) кнопок, так чтобы они то скрывали, то отображали нечетные элементы с классом
+                MsoNormal.
+            </span>
+            <button onclick="Exs6_var1(event)"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Скрыть
+            </button>
+            <div class="border-2 border-pink-500 rounded-lg p-3 mt-1">
+                <ul
+                    class="flex flex-col items-center [&>li]:bg-pink-500 [&>li]:rounded space-y-1 [&>li]:p-2 [&>li]:m-1 [&>li]:text-white [&>li]:min-w-[50px] [&>li]:text-center">
+                    <li>1 (нечетный)</li>
+                    <li>2 (четный)</li>
+                    <li>3 (нечетный)</li>
+                    <li>4 (четный)</li>
+                    <li>5 (нечетный)</li>
+                    <li>6 (четный)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-pink-500">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 5</h2>
+            <span class="text-sm text-gray-300 mb-3">Скрыть по нажатию</span>
+            <button onclick="Exs6_5(event)"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Скрыть этот блок
+            </button>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 6</h2>
+            <span class="text-sm text-gray-300 mb-3">Обработка даблклика </span>
+            <button onclick="Exs6_6()"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Скрыть при даблклике
+            </button>
+            <div class="border-2 border-pink-500 rounded-lg p-3 mt-1">
+                <p id="dblclick">hide me on dblclick!</p>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 7</h2>
+            <span class="text-sm text-gray-300 mb-3">Слушатель для изменения при наведении </span>
+            <button id="chengBtn"
+                class="hover-effect-button w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Измениюсь при наведении
+            </button>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 8</h2>
+            <span class="text-sm text-gray-300 mb-3">Слушатель для изменения при фокусе </span>
+            <input type="text" id="focus" placeholder="Кликните для фокуса..."
+                class="w-full p-3 border-2 border-pink-500 rounded-lg bg-gray-900 text-white placeholder-gray-400 focus:outline-none transition-all duration-300">
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 9</h2>
+            <span class="text-sm text-gray-300 mb-3">Скорость сокрытия элемента 1000</span>
+            <button onclick="Exs6_9(event)"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Скрыть
+            </button>
+            <p id="speedChenge" class="border-2 border-pink-500 rounded-lg p-3 mt-1">Element</p>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 10</h2>
+            <span class="text-sm text-gray-300 mb-3">Обработчик событий toggle</span>
+            <button onclick="Exs6_10(event)"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Скрыть
+            </button>
+            <p id="speedChenge" class="border-2 border-pink-500 rounded-lg p-3 mt-1">Element</p>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Индивидуальное задание 2: Вариант 1</h2>
+            <span class="text-sm text-gray-300 mb-3">добавить обработку события «наведение
+                мышки на элемент». Если этот элемент относится к таблице (в теге <\img\>), то при
+                    наведении на него курсора, он должен скрываться.
+            </span>
+            <button onclick="Exs6_var2()"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Скрыть
+            </button>
+            <table class="border-2 border-pink-500 rounded-lg p-3 mt-1">
+                <thead>Table</thead>
+                <tbody>
+                    <tr>
+                        <td>image</td>
+                        <td class="imgInTable h-60 w-100"><img
+                                src="https://i.pinimg.com/originals/6a/8e/4d/6a8e4d2b450f10d3733422efc4e95526.gif" />
+                        </td>
+                        <td class="imgInTable h-60 w-auto"><img
+                                src="https://i.pinimg.com/originals/ad/2d/be/ad2dbeeebdd35ade857ff4e4fa94a270.gif" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 11</h2>
+            <span class="text-sm text-gray-300 mb-3">Обработчик через fadeIn</span>
+
+            <button id="hiddenDiv" onclick="Exs6_11()"
+                class="w-full bg-pink-500 text-white p-3 rounded hover:bg-pink-600 transform transition-all duration-200 font-medium">
+                Показать элементы
+            </button>
+
+            <div class="space-y-3 mt-3">
+                <div id="div1" class="border-2 border-pink-500 rounded-lg p-4 bg-pink-500/10 text-white hidden">
+                    🚀 Element 1 (быстрый)
+                </div>
+                <div id="div2" class="border-2 border-purple-500 rounded-lg p-4 bg-purple-500/10 text-white hidden">
+                    ⭐ Element 2 (средний)
+                </div>
+                <div id="div3" class="border-2 border-blue-500 rounded-lg p-4 bg-blue-500/10 text-white hidden">
+                    ✨ Element 3 (медленный)
+                </div>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 12</h2>
+            <span class="text-sm text-gray-300 mb-3">Обработчик через fadeOut</span>
+
+            <button id="showDiv" onclick="Exs6_12()"
+                class="w-full bg-pink-500 text-white p-3 rounded hover:bg-pink-600 transform transition-all duration-200 font-medium">
+                Скрыть элементы
+            </button>
+
+            <div class="space-y-3 mt-3">
+                <div id="div1_1" class="border-2 border-pink-500 rounded-lg p-4 bg-pink-500/10 text-white ">
+                    🚀 Element 1 (быстрый)
+                </div>
+                <div id="div2_2" class="border-2 border-purple-500 rounded-lg p-4 bg-purple-500/10 text-white ">
+                    ⭐ Element 2 (средний)
+                </div>
+                <div id="div3_3" class="border-2 border-blue-500 rounded-lg p-4 bg-blue-500/10 text-white ">
+                    ✨ Element 3 (медленный)
+                </div>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Индивидуальное задание 3: Вариант 3</h2>
+            <span class="text-sm text-gray-300 mb-3">создать файл Individual_3.html,
+                добавить 10 параграфов (&lt;p&gt;) с каким-либо
+                текстом, невидимые при загрузке страницы, и кнопку. При нажатии на кнопку должно в
+                цикле срабатывать проявление четных параграфов и исчезновение нечетных со скоростью
+                2000, а затем наоборот</span>
+
+            <button onclick="Exs6_var3(event)"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed">
+                Показать
+            </button>
+
+            <div class="border-2 border-pink-500 rounded-lg p-3 mt-1">
+                <p class="hidden">Параграф 1 (нечетный)</p>
+                <p class="hidden">Параграф 2 (четный)</p>
+                <p class="hidden">Параграф 3 (нечетный)</p>
+                <p class="hidden">Параграф 4 (четный)</p>
+                <p class="hidden">Параграф 5 (нечетный)</p>
+                <p class="hidden">Параграф 6 (четный)</p>
+                <p class="hidden">Параграф 7 (нечетный)</p>
+                <p class="hidden">Параграф 8 (четный)</p>
+                <p class="hidden">Параграф 9 (нечетный)</p>
+                <p class="hidden">Параграф 10 (четный)</p>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 13</h2>
+            <span class="text-sm text-gray-300 mb-3">Sliding методы</span>
+
+            <button id="flip" onclick="Exs6_13()"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Показать панель
+            </button>
+
+            <div id="schengeDiv" class="border-2 border-pink-500 rounded-lg p-3 mt-1 bg-pink-500/10 text-white"
+                style="display: none;">
+                Hello world! Это панель, которая появляется с анимацией slideDown
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 14</h2>
+            <span class="text-sm text-gray-300 mb-3">Метод animate()</span>
+
+            <button onclick="Exs6_14()"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Запустить анимацию
+            </button>
+
+            <div id="schengeDiv"
+                class="border-2 border-pink-500 rounded-lg p-3 mt-1 bg-pink-500/10 text-white relative">
+                Hello world! Я двигаюсь вправо
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 15</h2>
+            <span class="text-sm text-gray-300 mb-3">Перебор ссылок и вывод href</span>
+
+            <button onclick="Exs6_15()"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Показать ссылки
+            </button>
+
+            <div id="schengeDiv" class="border-2 border-pink-500 rounded-lg p-3 mt-1 bg-pink-500/10 text-white">
+                <ul id="linksShow" class="list-disc list-inside space-y-2">
+                    <li><a href="http://jquery.com" class="text-blue-400 hover:text-blue-300">jQuery</a></li>
+                    <li><a href="http://jqueryui.com" class="text-blue-400 hover:text-blue-300">jQuery UI</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 16</h2>
+            <span class="text-sm text-gray-300 mb-3">При загрузке страницы показ всех ссылок</span>
+            <p class="border-2 border-pink-500 rounded-lg p-3 mt-1"> Complited</p>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 17</h2>
+            <span class="text-sm text-gray-300 mb-3">Метод each() с прерыванием цикла</span>
+
+            <button onclick="Exs6_17()"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Запустить перебор
+            </button>
+
+            <div class="border-2 border-pink-500 rounded-lg p-3 mt-1 bg-pink-500/10 text-white">
+                <a href="http://wikipedia.ru" class="text-blue-400 hover:text-blue-300 block mb-2">Википедия</a>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><a href="http://jquery.com" class="text-blue-400 hover:text-blue-300">jQuery</a></li>
+                    <li><a href="http://sizzlejs.com" class="text-blue-400 hover:text-blue-300">Sizzle</a></li>
+                    <li><a href="http://blog.jquery.com" class="text-blue-400 hover:text-blue-300">jQuery Blog</a></li>
+                    <li><a href="https://google.com" class="text-blue-400 hover:text-blue-300">Google</a></li>
+                    <li><a href="https://github.com" class="text-blue-400 hover:text-blue-300">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 18</h2>
+            <span class="text-sm text-gray-300 mb-3">Методы text() и html()</span>
+
+            <div class="grid grid-cols-2 gap-2 mb-3">
+                <button id="btn1"
+                    class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink  -600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                    Show Text
+                </button>
+                <button id="btn2"
+                    class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                    Show HTML
+                </button>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 19</h2>
+            <span class="text-sm text-gray-300 mb-3">Метод val() для получения значения input</span>
+
+            <button
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95 mb-3">
+                Show Value
+            </button>
+
+            <div class="border-2 border-pink-500 rounded-lg p-3 bg-pink-500/10 text-white">
+                <p class="mb-2">Name: <input type="text" id="test" value="Mickey Mouse"
+                        class="bg-gray-800 text-white border border-gray-600 rounded px-2 py-1 ml-2 w-48"></p>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 20</h2>
+            <span class="text-sm text-gray-300 mb-3">Метод attr() для получения атрибутов</span>
+
+            <button
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95 mb-3">
+                Show href Value
+            </button>
+
+            <div class="border-2 border-pink-500 rounded-lg p-3 bg-pink-500/10 text-white">
+                <p><a href="http://www.w3schools.com" id="w3s"
+                        class="text-blue-400 hover:text-blue-300 underline">W3Schools.com</a></p>
+            </div>
+        </div>
+    </section>
+
     <footer
         class="h-auto bg-gray-200 bg-opacity-20 backdrop-blur-md border border-white border-opacity-20 rounded-lg shadow-l md:p-3 flex flex-row gap-3 justify-between  w-[100%] bg-gray-200 backdrop-blur-sm p-5">
         <address id="conection">
