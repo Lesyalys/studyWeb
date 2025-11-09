@@ -540,7 +540,7 @@ const Exs6_3_2 = (event) => {
 const Exs6_4 = (event) => {
     $(event.target).closest('.bg-black').find('.hides').hide(500);
 }
-//Вариант 1: в исходный файл Experiments.html добавить в начало две кнопки: одну-для
+// Вариант 1: в исходный файл Experiments.html добавить в начало две кнопки: одну-для
 // скрытия элементов, другую – для отображения скрытых элементов. Настроить методы
 // click( ) кнопок, так чтобы они то скрывали, то отображали нечетные элементы с классом MsoNormal.
 const Exs6_var1 = (event) => {
@@ -709,13 +709,28 @@ const Exs6_18 = () => {
     });
 }
 const Exs6_19 = () => {
-    $("button").click(function () {
+    $("#button19").click(function () {
         alert("Value: " + $("#test").val());
     });
 }
 const Exs6_20 = () => {
-    $("button").click(function () {
+    $("#button20").click(function () {
         alert($("#w3s").attr("href"));
+    });
+}
+const Exs6_var4 = () => {
+    //  все изображения
+    const $images = $('img');
+
+    $images.each(function (index) {
+
+        if (index % 2 === 0) { // Нечетные рисунки (1,3,5)
+            const $currentImg = $(this);
+            $currentImg.slideUp('slow', function () {
+                // После скрытия  обратно
+                $(this).slideDown('slow');
+            });
+        }
     });
 }
 $(document).ready(function () {
@@ -724,6 +739,5 @@ $(document).ready(function () {
     Exs6_var2();
     Exs6_18();
     Exs6_19();
-    Exs6_20();
     // Exs6_16();
 });

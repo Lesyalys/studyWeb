@@ -60,8 +60,8 @@
                             <!-- <img
                                 src="https://shared.fastly.steamstatic.com/community_assets/images/items/322330/441c842d0a004472197b448c5dc26e4ab43afe37.png"> -->
                         </div>
-                        <img
-                            src="https://avatars.fastly.steamstatic.com/ba0ff98969824d77c0816b25bfdb54790054dd20_full.jpg">
+                        <img src="https://i.pinimg.com/736x/6b/02/db/6b02dbd120c3d7b4ce0469a570f7d436.jpg"
+                            class="h-60 w-60">
                     </div>
                     <div class="pl-36px pr-18px">Valentyukevich Olesya 3312</div>
                 </div>
@@ -89,31 +89,32 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
                     class="flex flex-row border-l-4 border-white bg-black p-4 rounded-r-lg transition-all duration-300 hover:bg-gray-800 hover:translate-x-1">
                     <a href="./web Валентюкевич О.Е 3312.docx" download="web Валентюкевич О.Е 3312.docx"
                         class="flex items-center text-white font-medium">
-                        <span class="mr-2">📥</span>
+                        <span class="line-md--document-report"></span>
                         Labs 2 report
                     </a>
                 </li>
                 <li
-                    class="flex flex-row border-l-4 border-blue-500 bg-black p-4 rounded-r-lg transition-all duration-300 hover:bg-gray-800 hover:translate-x-1">
+                    class="flex flex-row  border-l-4 border-blue-500 bg-black p-4 rounded-r-lg transition-all duration-300 hover:bg-gray-800 hover:translate-x-1">
                     <a href="http://y98252j9.beget.tech/?#AboutMe" download="web Валентюкевич О.Е 3312.docx"
                         class="flex items-center text-white font-medium" target="_blank">
-                        <span class="mr-2">📥</span>
+                        <span class="streamline-plump--web"></span>
                         Labs 2 web solution
+                    </a>
+                </li>
+
+                <li
+                    class="flex flex-row border-l-4 border-blue-500 bg-black p-4 rounded-r-lg transition-all duration-300 hover:bg-gray-800 hover:translate-x-1">
+                    <a href="./лаб4_Валентюкевич_3312.docx" download="web Валентюкевич О.Е 3312.docx"
+                        class="flex items-center text-white font-medium">
+                        <span class="line-md--document-report"></span>
+                        Labs 4 report
                     </a>
                 </li>
                 <li
                     class="flex flex-row border-l-4 border-red-500 bg-black p-4 rounded-r-lg transition-all duration-300 hover:bg-gray-800 hover:translate-x-1">
                     <a href="#labs_4" class="flex items-center text-white font-medium">
-                        <span class="mr-2">🔬</span>
-                        Labs 4
-                    </a>
-                </li>
-                <li
-                    class="flex flex-row border-l-4 border-blue-500 bg-black p-4 rounded-r-lg transition-all duration-300 hover:bg-gray-800 hover:translate-x-1">
-                    <a href="./web Валентюкевич О.Е 3312.docx" download="web Валентюкевич О.Е 3312.docx"
-                        class="flex items-center text-white font-medium">
-                        <span class="mr-2">📥</span>
-                        Labs 4 report
+                        <span class="streamline-plump--web"></span>
+                        Labs 4 solution
                     </a>
                 </li>
             </ul>
@@ -698,7 +699,7 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
             <h2 class="text-lg font-semibold mb-2 text-white">Задание 19</h2>
             <span class="text-sm text-gray-300 mb-3">Метод val() для получения значения input</span>
 
-            <button
+            <button id="button19"
                 class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95 mb-3">
                 Show Value
             </button>
@@ -712,7 +713,7 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
             <h2 class="text-lg font-semibold mb-2 text-white">Задание 20</h2>
             <span class="text-sm text-gray-300 mb-3">Метод attr() для получения атрибутов</span>
 
-            <button
+            <button id="button20" onclick="Exs6_20()"
                 class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95 mb-3">
                 Show href Value
             </button>
@@ -720,6 +721,30 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
             <div class="border-2 border-pink-500 rounded-lg p-3 bg-pink-500/10 text-white">
                 <p><a href="http://www.w3schools.com" id="w3s"
                         class="text-blue-400 hover:text-blue-300 underline">W3Schools.com</a></p>
+            </div>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Индивидуальное задание 4: Вариант 4</h2>
+            <span class="text-sm text-gray-300 mb-3">Слайд-шоу для нечетных рисунков</span>
+
+            <button onclick="Exs6_var4()" id="buttonVar4"
+                class="w-full bg-pink-500 text-white p-2 rounded hover:bg-pink-600 transform hover:scale-105 transition-all duration-200 active:scale-95 mb-4">
+                Запустить слайд-шоу
+            </button>
+
+            <div class="space-y-2 flex flex-row">
+                <img src="https://i.pinimg.com/originals/4c/2d/0f/4c2d0f7e2c89f437ebe6d0807fc562c8.gif" alt="Image 1"
+                    class="w-20 h-20 object-cover border-2 border-pink-500 rounded">
+                <img src="https://i.pinimg.com/originals/bd/16/c4/bd16c4167a18aacc628312cd09f5eacb.gif" alt="Image 2"
+                    class="w-20 h-20 object-cover border-2 border-blue-500 rounded">
+                <img src="https://i.pinimg.com/originals/76/05/80/7605807f49770a02962c18f42f4ea188.gif" alt="Image 3"
+                    class="w-20 h-20 object-cover border-2 border-pink-500 rounded">
+                <img src="https://i.pinimg.com/originals/2b/c1/fe/2bc1feef61688884d765048fb4da5ffb.gif" alt="Image 4"
+                    class="w-20 h-20 object-cover border-2 border-blue-500 rounded">
+                <img src="https://i.pinimg.com/originals/6e/ae/b0/6eaeb0139b60293aa9c494dea39a1ac7.gif" alt="Image 5"
+                    class="w-20 h-20 object-cover border-2 border-pink-500 rounded">
+                <img src="https://i.pinimg.com/originals/88/6f/c5/886fc547766b7af6ed85e8dc8da4943b.gif" alt="Image 6"
+                    class="w-20 h-20 object-cover border-2 border-blue-500 rounded">
             </div>
         </div>
     </section>
