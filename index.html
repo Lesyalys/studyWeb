@@ -119,7 +119,9 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
     </section>
 
 
-    <section id="labs_4" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 [&>div>button]:transition-all">
+    <h2 class="text-3xl font-bold text-white my-8 text-center">Ex 2</h2>
+    <section id="labs_4"
+        class=" min-h-screen w-full overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 [&>div>button]:transition-all">
         <!-- Задание 1.1 -->
         <div
             class="bg-black p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-700">
@@ -328,6 +330,52 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
                 Создать массив
             </button>
             <span id="result8_1" class="result-hidden mt-2 p-2 bg-gray-800 rounded text-sm text-white"></span>
+        </div>
+    </section>
+    <h2 class="text-3xl font-bold text-white my-8 text-center">Ex 3-5</h2>
+    <section class=" min-h-screen w-full overflow-hidden grid grid-cols-3">
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 3</h2>
+            <p class="text-sm text-gray-300 mb-3">Создайте скрипт, выводящий на экран свойства и значения: </p>
+            <span class="flex flex-col gap-2">
+                <button onclick="Ex3('result3','window')"
+                    class="w-full bg-purple-500 text-white p-2 rounded hover:bg-purple-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                    window
+                </button>
+                <button onclick="Ex3('result3','document')"
+                    class="w-full bg-purple-500 text-white p-2 rounded hover:bg-purple-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                    document
+                </button>
+                <button onclick="Ex3('result3','location')"
+                    class="w-full bg-purple-500 text-white p-2 rounded hover:bg-purple-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                    location
+                </button>
+                <button onclick="Ex3('result3','navigator')"
+                    class="w-full bg-purple-500 text-white p-2 rounded hover:bg-purple-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                    navigator
+                </button>
+            </span>
+            <span id="result3" class="result-hidden mt-2 p-2 bg-gray-800 rounded text-sm text-white"></span>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 4</h2>
+            <p class="text-sm text-gray-300 mb-3">По щелчку на кнопке «Сортировка » отсортировать нечетные строки
+                массива по возрастанию, а четные по убыванию</p>
+            <button onclick="Ex4('result4')"
+                class="w-full bg-purple-500 text-white p-2 rounded hover:bg-purple-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Создать массив
+            </button>
+            <span id="result4" class="result-hidden mt-2 p-2 bg-gray-800 rounded text-sm text-white"></span>
+        </div>
+        <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
+            <h2 class="text-lg font-semibold mb-2 text-white">Задание 5</h2>
+            <p class="text-sm text-gray-300 mb-3">Создать программу для решения системы трех линейных однородных
+                уравнений с тремя переменными методом Крамера</p>
+            <button onclick="Ex5('result5')"
+                class="w-full bg-purple-500 text-white p-2 rounded hover:bg-purple-600 transform hover:scale-105 transition-all duration-200 active:scale-95">
+                Создать массив
+            </button>
+            <span id="result5" class="result-hidden mt-2 p-2 bg-gray-800 rounded text-sm text-white"></span>
         </div>
     </section>
     <footer
