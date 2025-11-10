@@ -52,39 +52,50 @@
 
             <div class="flex flex-row justify-between w-1/2 pt-2 bg-black bg-opacity-50 p-10">
 
-                <div class="flex flex-row gap-5 ">
-                    <div class="playerAvatarAutoSizeInner">
-                        <div class="profile_avatar_frame">
-                            <!-- <img class="_3fM0F85j3aWVzr4RJM9-eu"
-                                src="https://cdn.fastly.steamstatic.com/steamcommunity/public/images/items/2726450/bf774b4d0d5c992154cc9ea922e061d18cb29558.apng"> -->
-                            <!-- <img
-                                src="https://shared.fastly.steamstatic.com/community_assets/images/items/322330/441c842d0a004472197b448c5dc26e4ab43afe37.png"> -->
+                <div class="flex flex-row gap-5">
+                    <div class="relative inline-block">
+                        <div class="relative inline-block w-60 h-60">
+                            <div class="relative w-full h-full">
+                                <!-- Фоновая картинка - уменьшенная -->
+                                <img src="https://i.pinimg.com/736x/6b/02/db/6b02dbd120c3d7b4ce0469a570f7d436.jpg"
+                                    class="w-full h-full object-cover rounded scale-90">
+
+                                <!-- Рамка поверх -->
+                                <div class="absolute top-0 left-0 w-full h-full">
+                                    <img src="https://shared.fastly.steamstatic.com/community_assets/images/items/322330/441c842d0a004472197b448c5dc26e4ab43afe37.png"
+                                        class="w-full h-full object-contain">
+                                </div>
+                            </div>
                         </div>
-                        <img src="https://i.pinimg.com/736x/6b/02/db/6b02dbd120c3d7b4ce0469a570f7d436.jpg"
-                            class="h-60 w-60">
                     </div>
-                    <div class="pl-36px pr-18px">Valentyukevich Olesya 3312</div>
+                    <div class="pl-36px pr-18px">Valentyukevich Olesya 3312<button id="difName"
+                            class="mingcute--down-line p-1" onclick="difName(event)"></button>
+                        <p class="hidden border-2 border-white bg-black p-2 rounded-lg text-end" id="difNameInfo">
+                            Lysenko Olesya
+                        </p>
+                    </div>
                 </div>
 
                 <div class="">
 
-                    <div class="flex flex-row gap-5 pl-1">Level <div class="friendPlayerLevel lvl_20"><span
-                                class="border-2 rounded-full p-1 border-white">24</span></div>
+                    <div class="flex flex-row gap-5 pl-2 mb-2 text-xl ">Level <div class="friendPlayerLevel lvl_20">
+                            <span class="border-2 rounded-full p-1 px-2 border-white">24</span>
+                        </div>
                     </div>
-                    <div class="flex flex-row">
+                    <div class="flex flex-row space-x-2 space-y-1">
                         <div class="" data-tooltip-html="Years of Service&lt;br&gt;
 Member since 26 June, 2018." aria-describedby="tooltip-18">
                             <img src="https://community.fastly.steamstatic.com/public/images/badges/02_years/steamyears3_80.png"
                                 class="badge_icon small">
                         </div>
                         <div class="favorite_badge_description">
-                            <div class="name ellipsis">Years of Study</div>
-                            <div class="xp">350 XP</div>
+                            <div class="">Years of Study</div>
+                            <div class="">350 XP</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <ul class="space-y-4 w-1/2 bg-black bg-opacity-50 [&>li]:border-white">
+            <ul class=" space-y-4 w-1/2 bg-black bg-opacity-50 [&>li]:border-white">
                 <li
                     class="flex flex-row border-l-4 border-white bg-black p-4 rounded-r-lg transition-all duration-300 hover:bg-gray-800 hover:translate-x-1">
                     <a href="./web Валентюкевич О.Е 3312.docx" download="web Валентюкевич О.Е 3312.docx"
@@ -123,7 +134,7 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
 
     <h2 class="text-3xl font-bold text-white my-8 text-center">Ex 2</h2>
     <section id="labs_4"
-        class=" min-h-screen w-full overflow-hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 [&>div>button]:transition-all">
+        class=" min-h-screen w-full overflow-hidden grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 [&>div>button]:transition-all">
         <!-- Задание 1.1 -->
         <div
             class="bg-black p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-700">
@@ -336,7 +347,7 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
     </section>
 
     <h2 class="text-3xl font-bold text-white my-8 text-center">Ex 3-5</h2>
-    <section class=" min-h-screen w-full overflow-hidden grid grid-cols-3">
+    <section class=" min-h-screen w-full overflow-hidden grid grid-cols-3  md:grid-cols-1 lg:grid-cols-3 ">
         <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
             <h2 class="text-lg font-semibold mb-2 text-white">Задание 3</h2>
             <p class="text-sm text-gray-300 mb-3">Создайте скрипт, выводящий на экран свойства и значения: </p>
@@ -383,7 +394,7 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
     </section>
 
     <h2 class="text-3xl font-bold text-white my-8 text-center">Ex 6 (JQwery)</h2>
-    <section class=" min-h-screen w-full overflow-hidden grid grid-cols-3">
+    <section class=" min-h-screen w-full overflow-hidden grid grid-cols-3  md:grid-cols-1 lg:grid-cols-3 ">
         <div class="bg-black p-4 rounded-lg shadow-md border border-gray-700">
             <h2 class="text-lg font-semibold mb-2 text-white">Задание 1</h2>
             <span class="text-sm text-gray-300 mb-3">Выполнить пример, проверить работу метода hile ( ). </span>
@@ -525,7 +536,7 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
                     наведении на него курсора, он должен скрываться.
             </span>
             <table class="border-2 border-pink-500 rounded-lg p-3 mt-1">
-                <thead>Table</thead>
+                <thead></thead>
                 <tbody>
                     <tr>
                         <td>image</td>
@@ -759,6 +770,10 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
             getElementId.textContent = result;
             getElementId.classList.remove('result-hidden');
             getElementId.classList.add('result-visible');
+        }
+
+        const difName = (event) => {
+            $(event.target).closest('.bg-black').find('#difNameInfo').toggle(500);
         }
 
         //1.1 Дано число. Проверьте, отрицательное оно или нет. Выведите об этом информацию в консоль.
@@ -1495,7 +1510,7 @@ Member since 26 June, 2018." aria-describedby="tooltip-18">
             Exs6_var2();
             Exs6_18();
             Exs6_19();
-            Exs6_16();
+            // Exs6_16();
         });
     </script>
 </body>
